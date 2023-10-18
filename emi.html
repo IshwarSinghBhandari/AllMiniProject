@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+function calculateEMI(p, r, t) {
+
+const monthly = r / 12 / 100;
+
+const emi = (p * monthly * Math.pow(1 + monthly, t)) / (Math.pow(1 + monthly, t) - 1);
+
+return emi;
+}
+
+const p = 2500000; 
+const r = 8.5; 
+const t = 30; 
+
+const emi = calculateEMI(p, r, t);
+
+console.log(`The EMI is: ${emi}`);
+
+
+    </script>
+    
+</body>
+</html>
