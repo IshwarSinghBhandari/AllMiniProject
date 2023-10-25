@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans&display=swap" rel="stylesheet">
+      
+<style>
+    body{
+        font-family: 'Playpen Sans', cursive;
+    }
+    .container {
+    max-width: 40rem;
+    height: 90vh;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #B931FC;
+  }
+  h1{
+    margin: 0.5rem;
+  }
+  
+  input, button {
+    margin-bottom: 10px;
+    width: 90%;
+    padding: 8px;
+  }
+  input{
+        height: 2rem;
+        font-size: 2rem;
+        padding-left: 1rem;
+        margin-bottom: 2rem;
+        margin-right: 0%;
+        border-radius: 1rem;
+    }
+    button{
+        width: 19rem;
+        height: 3rem;
+        border-radius: 2rem;
+        background-color: rgb(252, 109, 14);
+        font-size: 1.5rem;
+    }
+
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  p{
+        font-size: 1.5rem;
+    }
+</style>
+      
+</head>
+<body>
+    <div class="container">
+        <h1>EMI & Intrest Calculator</h1>
+        <label for="loanAmount">Loan Amount (INR):</label>
+        <input type="number" value="10000" id="loanAmount"  ><br>
+        <label for="interestRate">Interest Rate (%):</label>
+        <input type="number" value="10" id="interestRate" step="0.01" ><br>
+        <label for="loanTenure">Loan Tenure (months):</label>
+        <input type="number" value="11" id="loanTenure" >
+        <button onclick="EMI()">Calculate EMI</button>
+        <button onclick="intrest()">Calculate intrest</button>
+        <p id="emi"></p>
+        <p id="si"></p>
+      </div>
+      
+        <script>
+      
+    function EMI() {
+        var loanAmount = (document.getElementById('loanAmount').value);
+  var interestRate = (document.getElementById('interestRate').value) / 100 / 12;
+  var loanTenure =(document.getElementById('loanTenure').value);
+  var emi = (loanAmount * interestRate * Math.pow(1 + interestRate, loanTenure)) / (Math.pow(1 + interestRate, loanTenure) - 1);
+  
+  document.getElementById('emi').textContent = 'EMI: ₹' + Number(emi).toFixed(3); 
+}
+
+function intrest(){
+    var loanAmount = (document.getElementById('loanAmount').value);
+  var interestRate = (document.getElementById('interestRate').value) / 100 / 12;
+  var loanTenure =(document.getElementById('loanTenure').value);   
+
+            var si = (loanAmount*interestRate*loanTenure) / 100;
+            console.log(si);
+            document.getElementById('si').textContent = 'Simple Intrest: ₹' + Number(si).toFixed(3); 
+
+            
+        }
+        </script>
+</body>
+</html>

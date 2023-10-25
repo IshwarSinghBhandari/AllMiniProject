@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playpen+Sans&display=swap" rel="stylesheet">
+    <style>
+        body{
+            margin: 0;
+            text-align: center;
+            background-color: #B15EFF;
+            font-family: 'Playpen Sans', cursive;
+        }
+
+
+        .cont{
+            display: flex;
+            justify-content: center;
+        }
+        input{
+            width: 15rem;
+            height: 3rem;
+            border-radius: 1rem;
+            margin: 2rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            border: 2px solid;
+            font-size: 1.4rem;
+            font-family: 'Playpen Sans', cursive;
+        }
+        button{
+            font-size: 1.2rem;
+            width: 10rem;
+            height: 3rem;
+            border-radius: 1rem;
+            margin: 2rem 1rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            background-color: rgb(59, 182, 21);   
+        }
+        #change{
+            width: 100px;
+            height: 100px;
+            background-color: tomato;
+            margin: 0 auto;
+        }
+        #hi{
+            margin-top: 2rem;
+        }
+        p{
+            font-size: 1.2rem;
+            margin: 0.5rem;
+            height: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Enter the number(px) to change container size</h1>
+    <div class="cont">
+        <input type="text" placeholder="Enter container width" value="100" id="text">
+    <button onclick="my()">Enter width</button> 
+    <button onclick="my1()">Enter height</button>
+    </div>
+    <div id="change">  </div>
+    <p id="hi">The width = 100px</p>
+    <p id="hi1">The height = 100px</p>
+    <script>
+      function my(){
+        var num=document.querySelector('#text').value;
+        document.querySelector('#change').style.width=Number(num)+'px';
+        document.querySelector('#hi').innerText="The width = "+num+"px";
+      }
+      function my1(){
+        var num=document.querySelector('#text').value;
+        document.querySelector('#change').style.height=Number(num)+'px';
+        document.querySelector('#hi1').innerText="The height = "+num+"px";
+      }
+    </script>
+</body>
+</html>

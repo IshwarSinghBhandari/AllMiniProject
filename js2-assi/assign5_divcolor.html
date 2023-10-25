@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playpen+Sans&display=swap" rel="stylesheet">
+    <style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 95vh;
+        background-color: #F875AA;
+        font-family: 'Playpen Sans', cursive;
+    }
+    .container{
+        border: 1px solid;
+        background-color:#FFA33C;
+        height: 90vh;
+        width: 80vw;
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: 3rem; ;
+        /* flex-direction: column; */
+        justify-content: center;
+        align-items: center;
+        border-radius: 2rem;
+    }
+    h3{
+        font-size: x-large;
+        margin-top: -1rem;
+        margin-bottom: 2rem;
+    }
+    input{
+        width: 22rem ;
+        height: 3rem;
+        font-size: 2rem;
+        padding-left: 1rem;
+        margin-bottom: 2rem;
+        border-radius: 1rem;
+    }
+    button{
+        width: 10rem;
+        height: 3rem;
+        border-radius: 2rem;
+        background-color: rgb(252, 109, 14);
+        font-size: 1.5rem;
+    }
+    p{
+        font-size: 1.6rem;
+        margin: auto;
+        text-align: center;
+        padding: 5rem;
+        
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h3>Enter the color name/code</h3>
+        <input type="text" id="text" value="green" placeholder="Enter the temperature"><br>
+        <button onclick="my()">Enter</button>
+        </div>
+        <p id="result">Hello world</p>
+      </div>
+<script>
+    function my(){
+        var name=document.querySelector('#text').value;
+    document.querySelector("#result").style.backgroundColor=name;
+    }
+</script>
+
+</body>
+</html>
