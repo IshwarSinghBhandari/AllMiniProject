@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playpen+Sans&display=swap" rel="stylesheet">
+    <style>
+        *{
+            font-family: 'Playpen Sans', cursive;
+        }
+        body{
+            box-sizing: border-box;
+            margin: 0%;
+            background: linear-gradient(to top left,#FFC8C8, #fa9d88,#5f99e4, #ebd574);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+        }
+        div{
+            display: grid;
+             /* justify-content: center; */
+            /*align-items: center; */
+            width: 40%;
+            height: 60%;
+            border-radius: 1rem;
+            background-color: rgba(185, 243, 233, 0.415); 
+  backdrop-filter: blur(10px);
+        }
+        input {
+            width: 60%;
+            margin: auto;
+            margin-top: 1rem;
+            height: 2.5rem;
+            border: none;
+            outline: none;
+            border-radius: 2rem;
+            font-size: 1.3rem;
+            padding-left: 1rem;
+        }
+        button{
+            width: 60%;
+            margin: auto;
+            margin-top: 1rem;
+            height: 60%;
+            border-radius: 2rem;
+            font-size: 1.3rem;
+            padding-left: 1rem;
+            background-color: #A6FF96  ;
+        }
+
+        #t1{
+            
+            margin-top: 2rem ;
+        }
+        #ok{
+            height: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="number" value="79" placeholder="Enter number" id="t1">
+        <input type="number" value="241" placeholder="Enter number" id="t2">
+        <input type="number" value="283" placeholder="Enter number" id="t3">
+        <button onclick="my()">Click</button>
+        <p id="ok"></p>
+        <script>
+            function my(){
+                var tt1=document.querySelector(`#t1`).value;
+                var tt2=document.querySelector(`#t2`).value;
+                var tt3=document.querySelector(`#t3`).value;
+                var sum=Number(tt1)+Number(tt2)+Number(tt3);
+                var avg=sum/2;
+                document.querySelector(`#ok`).innerHTML="The sum = "+sum+'<br>'+"The Average = "+avg;
+                document.querySelector(`#ok`).style.backgroundColor="rgb("+ tt1 +"," + tt2 + ","+ tt3 +")";
+               
+
+            }
+
+        </script>
+    </div>
+</body>
+</html>
