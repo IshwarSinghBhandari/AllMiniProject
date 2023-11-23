@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        body{
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        input{
+            border: 0;
+            width: 70%;
+        }
+        input:focus{
+            outline: none;
+        }
+       p{
+        cursor:not-allowed;
+       }
+       .container-lg{
+        width: 32rem;
+       }
+      .pin{
+        margin-left: 0% ;
+        max-width: 48%;
+        border-bottom: 2px solid blue;
+      }
+      #q{
+        display:inline-block;
+        border: 0;
+        background: white;
+        margin: 0;
+        color: darkgray;
+        padding-left: 1rem;
+      }
+      #ok{
+        color: red;
+      }
+    </style>
+<body>
+    <div class="container-lg m-5  border">
+        <div class="container pb-3 ml-0 p-0 pt-3 ">
+            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48ZWxsaXBzZSBjeD0iOSIgY3k9IjE0LjQ3OCIgZmlsbD0iI0ZGRTExQiIgcng9IjkiIHJ5PSIzLjUyMiIvPjxwYXRoIGZpbGw9IiMyODc0RjAiIGQ9Ik04LjYwOSA3LjAxYy0xLjA4IDAtMS45NTctLjgyNi0xLjk1Ny0xLjg0NSAwLS40ODkuMjA2LS45NTguNTczLTEuMzA0YTIuMDIgMi4wMiAwIDAgMSAxLjM4NC0uNTRjMS4wOCAwIDEuOTU2LjgyNSAxLjk1NiAxLjg0NCAwIC40OS0uMjA2Ljk1OS0uNTczIDEuMzA1cy0uODY0LjU0LTEuMzgzLjU0ek0zLjEzIDUuMTY1YzAgMy44NzQgNS40NzkgOC45MjIgNS40NzkgOC45MjJzNS40NzgtNS4wNDggNS40NzgtOC45MjJDMTQuMDg3IDIuMzEzIDExLjYzNCAwIDguNjA5IDAgNS41ODMgMCAzLjEzIDIuMzEzIDMuMTMgNS4xNjV6Ii8+PC9nPjwvc3ZnPg==" alt=""><p class="p-2 text-secondary d-inline">Deliver to</p> 
+        </div>
+        <div class="container pin p-0">
+            <input type="number " maxlength="6" placeholder="Enter delivery pincode" id="txt"> 
+            <p id="q" >Check</p>
+            
+        </div>
+        <p id="ok"></p>
+    </div>  
+    <script>
+        let a = 0;
+        var pincode=[262522,234343,235655,947562,235655,947563,235695]
+        document.querySelector('#txt').addEventListener('input', function () {
+            a++;
+            const inputValue = document.querySelector('#txt').value;
+    
+            if (a >= 6 && /^\d{6}$/.test(inputValue)) {
+                document.querySelector('#q').style.color = 'blue';
+                document.querySelector('#q').style.cursor = 'pointer';
+                document.querySelector('#q').addEventListener('click', function () {
+          
+             const inputValue = +document.querySelector('#txt').value;
+              if(pincode.indexOf(inputValue)!==-1){
+                document.querySelector('#ok').innerHTML = 'Valid Pincode ';
+                document.querySelector('#ok').style.color='lightgreen';
+              }
+              else {
+                document.querySelector('.pin').style.borderBottom = '2px solid red ';
+                document.querySelector('#ok').innerHTML = 'Not a valid pincode ';
+          }
+              });
+            } else {
+                document.querySelector('#q').style.color = '';
+           
+            }
+        });
+        
+      
+    </script>
+
+    </script>
+    
+    
+         
+</body>
+</html>

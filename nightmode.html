@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            padding: 1rem;
+            width: 96.5vw; 
+            transition: 0.6s;
+        }
+        img{width: 5%; cursor: pointer;border-radius: 50%;}
+        h1,p{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <img src="https://ps.w.org/dark-mode-for-wp-dashboard/assets/icon-256x256.png?rev=2404672" alt="">
+        <h1>Hello World!</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum, explicabo rerum hic a tempora dolorem, alias perferendis beatae itaque repellendus, quam qui quaerat quos ad ratione numquam dolore doloremque placeat corrupti assumenda excepturi repellat expedita! Accusantium vel obcaecati dolorum quibusdam quam asperiores error aspernatur ut corrupti dolore nemo porro delectus eveniet officia maxime eum ipsam ullam neque molestias veritatis minima ducimus, quod enim. Perspiciatis iste ex expedita atque fugiat. Esse blanditiis quod saepe eligendi error distinctio voluptates autem molestias velit unde atque aut minima facere porro, id, expedita minus magni ipsam architecto consequatur vitae earum quidem nisi. Aliquid nostrum blanditiis accusantium aperiam nobis dignissimos sapiente, veniam, eligendi voluptatum alias quas. Amet veniam quos laborum est, hic expedita quidem aut alias aliquid, quisquam minus iste ut vitae quia ullam exercitationem, architecto qui suscipit quasi dicta. Maxime ut, accusamus officia possimus blanditiis laudantium aut ducimus illum ea harum sint excepturi sed eos nostrum quo voluptates expedita numquam laboriosam ullam ipsum dolores, rerum in qui. Aliquam, quibusdam! Necessitatibus recusandae nemo consectetur ab. Labore, repudiandae? Commodi natus, eveniet saepe delectus rem alias sequi, nostrum libero magnam consequuntur labore! Possimus, recusandae magnam. Nulla quos nostrum voluptas eum iste odit dolorum, delectus, officiis consequatur cumque ea?</p>
+        <h1>Hello World!</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum, explicabo rerum hic a tempora dolorem, alias perferendis beatae itaque repellendus, quam qui quaerat quos ad ratione numquam dolore doloremque placeat corrupti assumenda excepturi repellat expedita! Accusantium vel obcaecati dolorum quibusdam quam asperiores error aspernatur ut corrupti dolore nemo porro delectus eveniet officia maxime eum ipsam ullam neque molestias veritatis minima ducimus, quod enim. Perspiciatis iste ex expedita atque fugiat. Esse blanditiis quod saepe eligendi error distinctio voluptates autem molestias velit unde atque aut minima facere porro, id, expedita minus magni ipsam architecto consequatur vitae earum quidem nisi. Aliquid nostrum blanditiis accusantium aperiam nobis dignissimos sapiente, veniam, eligendi voluptatum alias quas. Amet veniam quos laborum est, hic expedita quidem aut alias aliquid, quisquam minus iste ut vitae quia ullam exercitationem, architecto qui suscipit quasi dicta. Maxime ut, accusamus officia possimus blanditiis laudantium aut ducimus illum ea harum sint excepturi sed eos nostrum quo voluptates expedita numquam laboriosam ullam ipsum dolores, rerum in qui. Aliquam, quibusdam! Necessitatibus recusandae nemo consectetur ab. Labore, repudiandae? Commodi natus, eveniet saepe delectus rem alias sequi, nostrum libero magnam consequuntur labore! Possimus, recusandae magnam. Nulla quos nostrum voluptas eum iste odit dolorum, delectus, officiis consequatur cumque ea?</p>  
+    </div>
+    <script>
+        var cont=document.querySelector('.container');
+        var clck=0;
+        document.querySelector('img').addEventListener('click', function(){
+            if(clck==0){
+                // console.log(this)
+                this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlXJmPnZNrVIgo88okTlfptqMwfmgcirEXyw&usqp=CAU';
+               cont.style.backgroundColor = 'black';
+               cont.style.color='white';
+               clck=1;
+            }
+            else{
+                this.src='https://ps.w.org/dark-mode-for-wp-dashboard/assets/icon-256x256.png?rev=2404672';
+               cont.style.backgroundColor = 'white';
+               cont.style.color='black';
+               clck=0;
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="blub" src="https://www.w3schools.com/js/pic_bulboff.gif" alt="">
+    <script>
+        var off=0;console.log(off);
+        document.querySelector('#blub').addEventListener('click', function(){
+            
+            console.log(off);
+            if(off===1){
+                document.querySelector('#blub').src="https://www.w3schools.com/js/pic_bulboff.gif";
+                off=0;
+            }
+            else{
+                document.querySelector('#blub').src="https://www.w3schools.com/js/pic_bulbon.gif";
+                off=1;
+            }
+            
+        })
+    </script>
+</body>
+</html>
