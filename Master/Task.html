@@ -1,0 +1,90 @@
+<div class="container">
+    <input type="text" placeholder="Enter Task Name" class="txt" />
+    <button class="btn">Add</button>
+    <p></p>
+    <ul>
+        
+    </ul>
+</div>
+
+<style>
+    *{margin: 0;padding: 0;}
+    .container { width: 1000px; margin: auto ;padding: 30px;}
+    .txt{width: 85%; height: 35px;}
+    .btn{width: 100px;height: 35px;border: 1px solid;;}
+    ul{border: solid;list-style: none;margin-top: 20px;}
+    ul li:nth-child(2n){padding: 15px;background-color: #eee;}
+    ul li:nth-child(2n+1){padding: 15px;background-color: #ccc;margin-bottom: 5px;}
+    ul li span:nth-child(2){float: right;cursor: pointer;}
+</style>
+
+<script>
+        'use strict';
+// x=10;
+
+var taskList = ["Do Swimming", "Book Reading" , "No Coding" , "Watch Web Series" , "Do Late Come"];
+// console.log(taskList);
+generateList()
+
+function generateList(){
+    for(let value of taskList){
+        // console.log(value);
+        var liTag = document.createElement('li');
+        // console.log(liTag);
+        
+        var span1 = document.createElement('span');
+        // console.log(span1);
+        span1.innerHTML = value;
+
+        
+        var span2 = document.createElement('span');
+        // console.log(span2);
+        span2.innerHTML = 'X';
+        span2.addEventListener('click' , deleteData);
+
+    
+        // console.log(span1);
+        // console.log(span2);
+    
+        liTag.append(span1);
+        liTag.append(span2);
+    
+        document.querySelector('ul').append(liTag);
+                
+    }
+}
+
+document.querySelector('.btn').addEventListener('click', function(){
+    // console.log('test');
+    var txtData = document.querySelector('.txt').value;
+    // console.log(txtData);
+    // console.log( taskList.indexOf(txtData) );
+    if(taskList.indexOf(txtData) == -1){
+        taskList.push(txtData);
+        // console.log(taskList);
+        document.querySelector('ul').innerHTML = '';
+        
+        generateList();
+        document.querySelector('p').innerHTML = 'Task Added';
+    }
+    else{
+        document.querySelector('p').innerHTML = 'Task Exist';
+    }
+    document.querySelector('.txt').value= '';
+});
+
+function deleteData(){
+    // console.log(this);
+    // console.log(this.previousElementSibling);
+    // console.log(this.previousElementSibling.innerText);
+
+    var searchContent = this.previousElementSibling.innerText;
+    var indexNo = taskList.indexOf(searchContent);
+    // console.log(indexNo);
+    taskList.splice(indexNo,1);
+    // console.log(taskList);
+    document.querySelector('ul').innerHTML = '';
+    generateList();
+    
+}
+</script>

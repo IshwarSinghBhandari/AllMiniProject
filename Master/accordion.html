@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            font-family: Arial, Helvetica, sans-serif;
+            width: 60vw;
+            margin-left:1rem ;
+        }
+        button{
+            display: flex;
+            justify-content: space-between;
+            border: 1px solid;
+            font-size: 1.5rem;
+            padding: 0.8rem; 
+            width: 100%;
+            cursor: pointer;
+            margin: 0;
+            transition: 0.5s;
+        }
+        button:hover{
+            background-color: #ccc; 
+        }
+        .lorem{
+            font-size: 1.3rem;
+            padding:1rem;
+            display: none;
+            transition: 0.4s;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <button class="p1" >Section1 <span class="pl">+</span></button>
+        <div class="lorem lo1"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo explicabo laborum pariatur minima optio quis vitae officia nulla laboriosam assumenda voluptate, saepe fugiat iure atque odio odit eaque dolore ea!</p></div>
+
+        <button class="p1">Section1 <span class="pl">+</span> </button>
+        <div class="lorem lo2"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo explicabo laborum pariatur minima optio quis vitae officia nulla laboriosam assumenda voluptate, saepe fugiat iure atque odio odit eaque dolore ea!</p></div>
+
+        <button class="p1">Section1 <span class="pl">+</span> </button>
+        <div class="lorem lo3"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo explicabo laborum pariatur minima optio quis vitae officia nulla laboriosam assumenda voluptate, saepe fugiat iure atque odio odit eaque dolore ea!</p></div>
+    </div>
+
+    <script>
+        var buttons = document.querySelectorAll('.p1');
+    
+        for (var i = 0; i < buttons.length; i++) {
+            buttons[i].addEventListener('click', function () {
+                var nextElement = this.nextElementSibling;
+                var plElement = this.querySelector('.pl');
+    
+                // Check the computed style for the display property
+                var computedStyle = getComputedStyle(nextElement);
+    
+                if (computedStyle.display === 'none') {
+                    nextElement.style.display = 'block';
+                    plElement.innerHTML = "-";
+                } else {
+                    nextElement.style.display = 'none';
+                    plElement.innerHTML = "+";
+                }
+            });
+        }
+    </script>
+    
+     
+
+</body>
+</html>
+
+
+
+

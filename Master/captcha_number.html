@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        .container-lg{
+            background-color: #9BBEC8;
+        }
+        input{
+            outline: none;
+            border: none;         
+        }
+    </style>
+</head>
+<body>
+    <div class="container-lg mx-auto mt-4 p-4 fs-3 text-center  w-50">
+        <div class="quest">
+            <p id="num" class="d-inline-block fs-1 px-3"><span id="sp1"></span>+<span id="sp2"></span>=?</p>
+        <i class="bi bi-arrow-repeat"></i>
+        </div>
+        <input type="number" name="" class="border-bottom border-dark w-50 mb-4" id="txt"><br>
+        <button class="border-0 rounded-pill fs-4 px-3 ">Submit</button><br>
+    </div>
+    <script>
+        'use strict';
+        var sp1= document.querySelector('#sp1');
+        var sp2= document.querySelector('#sp2');
+        var pdCreated = false;
+        var sum=0;
+        document.querySelector(".bi").addEventListener('click', random)
+        function random(){
+                var ok1= Math.round(Math.random()*10);
+                var ok2= Math.round(Math.random()*10);
+                document.querySelector('#num').style.background=`linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%)`;
+                sp1.innerHTML=ok1;
+                sp2.innerHTML=ok2;
+                sum= ok1+ok2;
+            }
+            random();
+            document.querySelector('button').addEventListener('click',function(){
+                var txt= +document.querySelector('#txt').value;
+                if (sum !==txt) {
+                    alert("Please enter a valid txt");
+                }
+                else if (!pdCreated) {
+                    var pd = document.createElement("p");
+                    pd.innerHTML = "You are not a robot.";
+                    pd.classList.add("bi-stars");
+
+                    document.querySelector('.container-lg').append(pd);
+                    pdCreated = true;
+                }
+                
+            })
+
+    </script>
+</body>
+</html>
