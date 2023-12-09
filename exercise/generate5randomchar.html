@@ -1,0 +1,19 @@
+<!-- 104) Write a JavaScript function that generates 5 random characters
+output : fdasc or xbswer or aswer or yueiw ( ans so on ...) -->
+
+<!-- 105) Write a JavaScript function that generates 5 random numbers
+output : 12652 or 32456 or 98426 ( ans so on ...) -->
+
+<script>
+    let a;
+    let b='';
+    let c='';
+   for (let i = 0;i<=4;i++) {
+    a =Math.round(Math.random()*(122-97+1))+97; 
+
+    b +=String.fromCharCode(a)
+    c +=Math.round(Math.random()*9);
+   }
+   console.log(b);
+   console.log(c);
+</script>

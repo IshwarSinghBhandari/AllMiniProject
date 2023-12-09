@@ -1,0 +1,27 @@
+<!-- 75) create 2 textbox , get value from one text box (having class="txt1") and store in 2nd textbox. (having id="txt1") .  use button click
+(hint: use querySelector() function ) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" class="txt1" value="Ishwar">
+    <input type="text" id="txt1" value="Singh">
+    <button>Enter</button>
+</body>
+<script>
+        document.querySelector('button').onclick=function() {
+            let val1=document.querySelector('.txt1').value;
+            let val2=document.querySelector('#txt1').value;
+            document.querySelector('#txt1').value = val1;      
+            document.querySelector('.txt1').value = val2;
+        }
+
+         
+        
+</script>
+</html>

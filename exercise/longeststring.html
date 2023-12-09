@@ -1,0 +1,45 @@
+<!-- 90) Write a JavaScript program to find the longest string from a given array.
+[
+	input=> ["hello" ,"hello world" ,"how are you everyone"]
+	answer=>longest string is in array => how are you everyone
+    
+] -->
+
+<script>
+    let a="hello";
+    let b="hello world";
+    let c="how are you everyone";
+    
+    let aa=a.length;
+    let bb=b.length;
+    let cc=c.length;
+    // console.log(aa);
+    // console.log(bb);
+    // console.log(cc);
+    if (aa>bb && aa>cc) {
+        console.log(a);
+    }
+    else if(bb>aa && bb>cc) {
+        console.log(b);
+    }
+    else{
+        console.log(c);
+    }
+
+    function findLongestString(arr) {
+    let longestString = "";
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i].length > longestString.length) {
+            longestString = arr[i];
+        }
+    }
+    return longestString;
+}
+
+let inputArray = ["hello", "hello world", "how are you everyone"];
+let longestStringInArray = findLongestString(inputArray);
+
+// console.log("Input Array:", inputArray);
+console.log("Longest String:", longestStringInArray);
+
+</script>

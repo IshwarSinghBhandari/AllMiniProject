@@ -1,0 +1,22 @@
+<!-- 109) write a javascript program to get height & width of the document.  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Height and Width</title>
+    <script>
+        function getDocumentSize() {
+            const height = document.documentElement.scrollHeight;
+            const width = document.documentElement.scrollWidth;
+            alert(`Document Height: ${height}px\nDocument Width: ${width}px`);
+        }
+    </script>
+</head>
+<body>
+
+<button onclick="getDocumentSize()">Get Document Size</button>
+
+</body>
+</html>
+

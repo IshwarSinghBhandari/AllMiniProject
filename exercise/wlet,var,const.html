@@ -1,0 +1,41 @@
+<!-- 110) Write  a small example to show the diff between var , let & constant keyword. -->
+
+<script>
+    
+// Using var
+function exampleWithVar() {
+    if (true) {
+        var varVariable = "I am a var";
+        console.log(varVariable); // Outputs: "I am a var"
+    }
+
+    console.log(varVariable); // Outputs: "I am a var" (var is hoisted to the function scope)
+}
+
+// Using let
+function exampleWithLet() {
+    if (true) {
+        let letVariable = "I am a let";
+        console.log(letVariable); // Outputs: "I am a let"
+    }
+
+    // Error: Uncaught ReferenceError: letVariable is not defined
+    // console.log(letVariable);
+}
+
+// Using const
+function exampleWithConst() {
+    const constVariable = "I am a const";
+    console.log(constVariable); // Outputs: "I am a const"
+
+    // Error: Uncaught TypeError: Assignment to constant variable
+    // constVariable = "Trying to reassign"; 
+}
+
+// Invoking the examples
+exampleWithVar();
+exampleWithLet();
+exampleWithConst();
+
+
+</script>

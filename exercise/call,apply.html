@@ -1,0 +1,19 @@
+<!-- 113) write a small code to explain the use of call() , apply() -->
+
+<script>
+function greet(message, punctuation) {
+    console.log(this.name + ': ' + message + punctuation);
+}
+
+const person = {
+    name: 'John',
+};
+
+// Using call()
+greet.call(person, 'Hello', '!');
+
+// Using apply()
+const messageArgs = ['Hi', '!!!'];
+greet.apply(person, messageArgs);
+
+</script>

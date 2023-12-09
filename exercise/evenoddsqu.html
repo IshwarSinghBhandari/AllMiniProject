@@ -1,0 +1,25 @@
+<!-- 49) generate a series from 1 to 10 & show square of odd number , cube of even no ( hint: use any loop & modulus opearator ) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="p1"></p>
+    <p class="p2"></p>
+</body>
+<script>
+    for (var i = 0; i <10;i++) {
+        if(i%2==0){
+            document.querySelector('.p1').innerHTML +=`even Number square ${i} = ${i**2} <br>`
+        }
+        if(i%2!=0){
+            document.querySelector('.p2').innerHTML +=`odd Number cube ${i} = ${i**3} <br>`
+        }
+        
+    }
+</script>
+</html>

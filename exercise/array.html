@@ -1,0 +1,40 @@
+<!-- 44) create an array having any three number. show array structure within console. print individual values also. -->
+<!-- 45)  create an array having any three number. extract each values using for loop -->
+<!-- 46)  create an array having any three number. extract each values using while loop -->
+<!-- 47) create an array having any three number. extract each values using for in loop ( show both index & value in console ) -->
+<!-- 48) create an array having  any three number. use any loop and show the sum of all value in console -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p></p>
+</body>
+<script>
+    let arr= new Array(2,3,4);
+
+    console.log(arr);
+    for(let a of arr) {
+        console.log(a);
+        document.querySelector('p').innerHTML +=`<br>${a}`;
+    }
+    for(let a in arr) {
+        console.log(a,arr[a]);
+        
+    }
+    let i=0;
+    while( i<arr.length) {
+        console.log(arr[i]);
+        i++
+    }
+    let sum=0;
+    for(let i=0;i<arr.length;i++) {
+     sum =arr[i]+sum;
+     
+    }
+    console.log("sum of the array = "+sum);
+</script>
+</html>

@@ -1,0 +1,23 @@
+
+<!-- 76) create a textbox having id =" txt". on button click attach onmouseover event on textbox. after attachment do mouse over on textbox and print dummy text in console. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="Enter text" id="txt">
+    <button>open</button>
+    <p></p>
+</body>
+<script>
+    document.querySelector('button').onclick=function() {
+        document.getElementById('txt').addEventListener('mouseover', function(){
+            document.querySelector('p').innerHTML="mouse over the text box";
+        });
+    };
+</script>
+</html>

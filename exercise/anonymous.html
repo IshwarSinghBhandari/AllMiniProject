@@ -1,0 +1,47 @@
+<!-- 
+15) generate a function name calculate (Note: here you must have anonymous function instead of regular function ).
+print dummy text in console.
+
+a) call the same function using onblur event ( here use textbox )
+b) call the same function using onfocus event ( here use textbox ) -->
+
+<style>
+    .input{
+        font-size: 3rem;
+        width: 50%;
+        margin: auto;
+        margin-top: 2rem;
+        padding: 0.5rem;
+    }
+</style>
+<script>
+    let anon= function(){
+        console.log("Hey there!");
+    }
+    anon();
+
+        let fun=()=>{
+            let inp = document.createElement('input');
+            inp.placeholder = "Enter text";
+            inp.type = "text";
+            inp.className = "input";
+            document.body.appendChild(inp);
+            
+           inp.addEventListener('blur',function(){
+                this.style.background="lightgray";
+                this.value = this.value.toUpperCase();                
+        }); 
+            inp.addEventListener('focus',function(){
+                this.style.background="yellowgreen";
+             
+        }); 
+        };
+
+        window.onload=fun;
+
+       
+        
+
+   
+</script>
+</html>

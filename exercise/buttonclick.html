@@ -1,0 +1,18 @@
+<!-- 26) create a function ( name myfunc() ) and call the same function on button click ( hint : within function print test data using console) -->
+
+<script>
+
+    
+    let fun=function(){
+        let butt=document.createElement("button");
+        butt.innerHTML="click   "
+         
+        document.body.append(butt);
+        butt.onclick=myfunc;
+        function myfunc() {
+        console.log("hint : within function print test data using console");
+    }
+    }
+
+    window.onload=fun;
+</script>

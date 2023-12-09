@@ -1,0 +1,20 @@
+<!--  
+98) Write a JavaScript function that accepts a string as a parameter and converts the first letter of each word of the string in upper case. 
+
+input : hello world how are you
+output : Hello World How Are You -->
+
+<script>
+    let input = "hello world how are you";
+    let words = input.split(" ");
+    console.log(words.length);
+    
+    let output = "";
+    
+    for (let i = 0; i < words.length; i++) {
+        output += words[i].charAt(0).toUpperCase() + words[i].slice(1) + " ";
+    }
+
+    console.log(output);
+</script>
+

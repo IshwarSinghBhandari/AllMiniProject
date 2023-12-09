@@ -1,0 +1,27 @@
+
+<!-- 38) generate 2 textbox (having id txt1,txt2 respectively) , get values of both in data1 & data2. now show the sum of values in paragraph having id para ( note : if you recieve data from textbox then please check data type before you do the sum) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" name="" id="txt1">
+    <input type="number" name="" id="txt2">
+
+    <button>sum{ + }</button>
+    <p id="para"></p>
+</body>
+<script>
+    document.querySelector("button").addEventListener('click',function(){
+        let txt1= +document.querySelector("#txt1").value;
+        let txt2= +document.querySelector("#txt2").value;
+        console.log(typeof txt1);
+        console.log(typeof txt2);
+        
+        document.querySelector('#para').innerHTML=txt1+txt2;
+    })
+</script>
+</html>

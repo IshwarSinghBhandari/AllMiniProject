@@ -1,0 +1,64 @@
+<!-- 122) create an example to perform accordion operation using javascript. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div ,p{
+        width: 50%;
+        border: 1px solid;
+        padding: 0 1rem;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        background-color: lightgray;
+    }
+    h1,h2{
+        margin: 0%;
+    }
+    p{
+        display: none;
+        background-color: lightgreen;
+        padding: 2rem 1rem;
+    }
+    
+</style>
+<body>
+    <div id="div1">
+        <h2>Heading-1</h2> <h1>+</h1>
+    </div>
+    <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum corporis officia, mollitia iusto voluptates repellendus eum! Id commodi ut ex debitis facere architecto dolore, repellendus in quidem at aperiam iure!</p>
+    <div id="div1">
+        <h2>Heading-1</h2> <h1>+</h1>
+    </div>
+     <p id="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum corporis officia, mollitia iusto voluptates repellendus eum! Id commodi ut ex debitis facere architecto dolore, repellendus in quidem at aperiam iure!</p>
+    <div id="div1">
+        <h2>Heading-1</h2> <h1>+</h1>
+    </div>
+     <p id="p3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum corporis officia, mollitia iusto voluptates repellendus eum! Id commodi ut ex debitis facere architecto dolore, repellendus in quidem at aperiam iure!</p>
+</body>
+<script>
+ 
+ var divs = document.querySelectorAll('#div1, #div2, #div3');
+        
+        divs.forEach(function (div) {
+            div.addEventListener('click', function () {
+                var paragraph = this.nextElementSibling;
+                var plusMinus = div.querySelector('h1');
+                
+                if (paragraph.style.display === 'none' || paragraph.style.display === '') {
+                    paragraph.style.display = 'block';
+                    plusMinus.textContent = '-';
+                } else {
+                    paragraph.style.display = 'none';
+                    plusMinus.textContent = '+';
+                }
+            });
+        });
+      
+    
+</script>
+</html>

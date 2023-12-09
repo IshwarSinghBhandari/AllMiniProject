@@ -1,0 +1,47 @@
+<!-- 39) create a textbox (with id txt) & get value from textbox & check whether the entered value is string or number (hint: use isNaN() & if-else). show the result in console -->
+<!-- 40) create a textbox (with id txt) & get value from textbox , in case textbox is empty then please show textbox border with color red & border width 2px. -->
+
+<!-- 41) create a textbox (with id txt) & get value. -->
+<!-- if the value is string then show error in paragraph as only number is required.  -->
+<!-- 42) create a textbox (with id txt). create a paragraph (having id para ). onclick event get value from textbox and display it within paragraph ( hint: you may use innerText or innerHTML , get the diff. between innerText,innerHTML) -->
+
+<!-- 43) create a textbox (with id txt). create a paragraph (having id para ).onclick event get only number from textbox & display square of the no which you have entered ( hint: use Math library ) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="Enter text" id="txt">
+    <button>Enter</button>
+    <p class="p1"></p>
+   
+</body>
+<script>
+    document.querySelector('button').addEventListener('click', function(){
+        let value = document.querySelector("#txt").value;
+        if(isNaN(value)){
+            console.log("String")
+            document.querySelector(".p1").innerHTML="only number is required.";
+            document.querySelector(".p1").style.fontSize="1rem";
+
+            
+        }
+        else if(value==""){
+            document.querySelector("#txt").style.border="2px solid red";
+        }
+        else{
+            console.log("Number");
+            // document.querySelector(".p1").innerHTML=value**2;
+            document.querySelector(".p1").innerHTML=Math.pow(value,2);
+            document.querySelector(".p1").style.fontSize="3rem";
+        }
+
+        
+
+    })
+</script>
+</html>

@@ -1,0 +1,30 @@
+<!-- 29) create a function ( name myfunc() ) and pass 2 value having number 10 & 20 , do the multiplication & show the result in console  ( hint: use button & onclick event) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        function myfunc(a,b){
+            console.log(a*b);
+        }
+        window.onload=function(){
+            let butt=document.createElement("button");
+            butt.innerHTML="Enter";
+            document.body.append(butt);
+            butt.addEventListener('click',function(){
+                let a=10;
+                let b=20;
+                myfunc(a,b);
+            })
+            
+             }
+            
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!-- 87) Write a JavaScript program check if a given positive number is a multiple of 3 or a multiple of 7.
+[ here get input from textbox & show answer as yes or no in paragraph , do the procedure on button click ] -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="txt">
+    <button>Enter</button>
+    <p class="p1"></p>
+    <p class="p2"></p>
+</body>
+<script>
+    document.querySelector('button').onclick=function(){
+        let value=document.getElementById("txt").value;
+        if(value%3==0){
+            document.querySelector('.p1').innerHTML=" YES "+value +" multiple of 3 ";
+        }
+        if(value%7==0){
+            document.querySelector('.p2').innerHTML="YES "+value +"  multiple of 7 ";
+        }
+
+    }
+</script>
+</html>

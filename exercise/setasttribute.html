@@ -1,0 +1,42 @@
+<!-- 117) create a button and show image using img tag.
+on button click change image height & width.
+
+( note : use inbuilt function setAttribute() ) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Image Size Example</title>
+    
+</head>
+<body>
+
+<button onclick="changeImageSize()">Change Size</button>
+<img id="myImage" src="https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg" alt="Sample Image" width="300" height="200">
+<p id="p1"></p>
+    <p id="p2"></p>
+<script>
+    const imageElement = document.getElementById('myImage');
+        const ment1 = document.getElementById('p1');
+        const ment2 = document.getElementById('p2');
+        ment1.innerHTML=`Width = ${imageElement.getAttribute('width')}`;
+        ment2.innerHTML=`Height = ${imageElement.getAttribute('height')}`;
+        
+    function changeImageSize() {
+        const imageElement = document.getElementById('myImage');
+        const ment1 = document.getElementById('p1');
+        const ment2 = document.getElementById('p2');
+
+        imageElement.setAttribute('width', '500');
+        imageElement.setAttribute('height', '400');
+
+        ment1.innerHTML=`Width = ${imageElement.getAttribute('width')}`;
+        ment2.innerHTML=`Height = ${imageElement.getAttribute('height')}`;
+      
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!-- 120) create a crud operation using javascript.
+note: crud stands for create , read , update & delete
+requirement : generate 2 textbox ( for name & mobile ) , one button
+
+procedure: 
+
+	1)
+	on button click get 2 textbox value , validate it ( for name & mobile using regular expression ), incase if you find any error then show respective error message in paragraph.
+
+	2) if there is no error message then show textbox data in table format (note: here you must use appendChild() concept )
+
+    3) along with textbox data show delete button & edit button in table row
+
+	4) on delete button click remove respective table row.
+
+	5) on edit button click get table row data in 2 textbox. & update with new values. & show the final result in respective table row.
+ -->
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation Example</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        div{
+            padding: 2rem;
+            margin: auto;
+            border: 1px solid;
+            
+        }
+        #inp{
+            width: 35%;
+        }
+        #data{
+            width: 50%;
+        }
+       input{
+        font-size: 1.2rem;
+        padding: 0.2rem;
+        margin-bottom: 1rem;
+       }
+       label{
+        font-size: 1.2rem;
+       }
+       button{
+        font-size: 1.2rem;
+        padding: 0.5rem;
+        width: 8rem;
+        border-radius: 15px;
+       }
+       p{
+        color: red;
+       }
+       table{
+        width: 100%;
+       }
+       
+       .tdata, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  width: 50%;
+  padding: 8px;
+}
+.but{
+    font-size: 0.6rem;
+        padding: 0rem;
+        width: 3rem;
+        border-radius: 5px;
+}
+    </style>
+</head>
+<body>
+
+    <div id="inp">
+        <label for="name">Name</label><br>
+        <input type="text" id="name" value="Ishwar singh Bhandari" placeholder="Enter your name">
+        <br>
+        <label for="mobile">Mobile</label><br>
+        <input type="text" id="mobile" value="7894563210" placeholder="Enter your mobile number">
+        <br>
+        <button onclick="valid()">Submit</button>
+    
+        <p id="errorMessages"></p>
+    </div>
+    <div id="data">
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Mobile Number</th>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+          function print(name, mobile){
+            let table = document.querySelector('table');
+          let trow= document.createElement('tr');
+          let tdata1= document.createElement('td');
+          let tdata2= document.createElement('td');
+          let del= document.createElement('button');
+          let edit= document.createElement('button');
+
+          tdata1.textContent = name;
+          tdata2.textContent = mobile;
+          del.textContent = "Delete";
+          edit.textContent = "Edit";
+
+            
+            tdata1.classList.add('tdata')
+            tdata2.classList.add('tdata')
+            del.classList.add('but')
+            edit.classList.add('but')
+
+            trow.appendChild(tdata1);
+            trow.appendChild(tdata2);
+            trow.appendChild(del);
+            trow.appendChild(edit);
+            table.appendChild(trow);
+
+
+            del.onclick=function(){
+                // trow.parentNode.removeChild(trow);
+                delet(trow)
+            }
+            function delet(trow){
+                trow.remove();
+            }
+            edit.onclick=function(){
+                const nameInput = document.getElementById('name');
+            const mobileInput = document.getElementById('mobile');
+
+            nameInput.value = name;
+            mobileInput.value = mobile;
+            delet(trow);
+            }
+            
+        
+          }
+   
+
+        function fun1(nameInput,mobileInput){
+       
+            const errorMessages = document.getElementById('errorMessages');
+
+            const nameRegex = /^[a-zA-Z\s]+$/;
+            const mobileRegex = /^\d{10}$/;
+
+            errorMessages.innerHTML = '';
+           
+            if (!nameRegex.test(nameInput)) {
+         
+                errorMessages.innerHTML += 'Invalid name. Please enter a valid name.<br>';
+                
+            }
+
+           else if (!mobileRegex.test(mobileInput)) {
+                errorMessages.innerHTML += 'Invalid mobile number. Please enter a valid 10-digit mobile number.';
+            }
+            else{
+                print( nameInput,mobileInput);
+                // console.log( nameInput,mobileInput);
+            }
+        }
+        function valid() {
+            
+          var nameInput = document.getElementById('name').value;
+            var mobileInput = document.getElementById('mobile').value;
+            fun1(nameInput,mobileInput);      
+
+        }
+
+
+
+    </script>
+
+</body>
+</html>

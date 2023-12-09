@@ -1,0 +1,19 @@
+<!-- 103) Write a JavaScript function to extract unique characters from a string. 
+input : helloworld
+output: helowrd -->
+
+
+<script>
+    let a = "helloworld";
+    let uniqueChars = " ";
+
+    for (let i = 0; i < a.length; i++) {
+        let currentChar = a[i];
+
+        if (!uniqueChars.includes(currentChar)) {
+            uniqueChars += currentChar;
+        }
+    }
+
+    console.log(uniqueChars);
+</script>

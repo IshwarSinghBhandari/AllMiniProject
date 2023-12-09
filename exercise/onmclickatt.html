@@ -1,0 +1,28 @@
+<!-- 119) create a button and paragraph , on button click attach onmouseover and onmouse event to paragraph.
+( hint:  use addEventListener) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="fun()">
+        Enter
+    </button>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim aut incidunt ipsum adipisci consequatur! Cum, quidem odio animi assumenda ipsum rerum, amet vero pariatur fuga et sit debitis corporis nihil.</p>
+</body>
+<script>
+    function fun() {
+      let ptag=document.querySelector('p');
+      ptag.addEventListener('mouseover',function() {
+        this.style.color="lightgreen";
+          } );   
+      ptag.addEventListener('mouseout',function() {
+        this.style.color="red";
+          } );   
+        }
+</script>
+</html>

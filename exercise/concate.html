@@ -1,0 +1,26 @@
+<!-- 92)  Write a JavaScript program to concatenate two strings 
+[ input : hello & world ]
+[ output : helloworld] -->
+
+<!-- 93)  Write a JavaScript program to concatenate two strings except their first character.
+[ input : hello & world ]
+[ output : elloorld ] -->
+
+
+<script>
+      let input = "hello & world";
+let output = input.replace(" & ",""); 
+console.log(output);
+
+let out = output.replace("h",""); 
+let t = out.replace("w",""); 
+console.log(t);
+
+let str1= "hello";
+let str2="world";
+
+let ok=str1.slice(1)+str2.slice(1);
+let k=str1.slice(1).concat(str2.slice(1));
+console.log(ok);
+console.log(k);
+</script>

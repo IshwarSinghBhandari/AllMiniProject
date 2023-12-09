@@ -1,0 +1,46 @@
+<!-- 50) create an array with any three value . on button click add value 10 within an array (i.e at the end ) -->
+<!-- 51) create an array with any three value . on button click add value 20 within an array (i.e at start position -->
+<!-- 52) create an array with any five value . on button click remove last value -->
+<!-- 53) create an array with any five value . on button click remove first value -->
+<!-- 54) create an array with five value (i.e 10,20,30,40,50) . now search value 10 & 100 from the given array & print its position. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="p1">
+
+    </p>
+</body>
+<script>
+    let arr=new Array(10,20,30,40,50);
+    arr.push(10);
+    console.log(arr);
+    arr.unshift(20);
+    console.log(arr);
+    arr.pop();
+    console.log(arr);
+    arr.shift();
+    console.log(arr);
+    
+
+    let a=arr.indexOf(10)
+    let b=arr.indexOf(100)
+    console.log(a);
+    console.log(b);
+
+
+        if(a== -1){
+        console.log("not found");
+        }
+        if(b== -1){
+        console.log("not found");
+        }
+        
+
+</script>
+</html>

@@ -1,0 +1,60 @@
+    <!-- 
+    125)  create :paragraph , checkbox.
+    by default paragraph is hide.
+    on checkbox click  or change event do the following process
+        a) if checkbox is checked then show paragraph
+        b) if checkbox is unchecked then hide paragraph -->
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .div1{
+                margin: 4rem 4rem 2rem;
+            }
+            label{
+                font-size: 2rem;
+            }
+            input{
+                width: 2rem;
+                height: 2rem;
+            }
+            .div2{
+                transition: display 2s ; 
+                display: none;
+                margin: 2rem;
+                text-align: justify;
+                background-color: rgb(243, 239, 235);
+                padding:0.5rem 2rem;
+           
+            }
+        </style>
+    </head>
+    <body>
+    <div class="div1">
+        <label for="">Paragraph</label>
+        <input type="checkbox" name="" id="check"></div>
+        <div class="div2">
+            <h1>Heading 1</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo ea deleniti adipisci qui ab atque facere vel, iure repellat magni reiciendis, voluptas aperiam eius quas fugit dolorem vitae labore mollitia.lorem
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, dolor mollitia veniam illum sint similique rerum, omnis iure labore nisi commodi fuga sunt maiores maxime, nulla eaque fugit provident a?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate veritatis sed odit magni voluptas vel vitae possimus optio? Voluptates optio harum deleniti, delectus mollitia distinctio rem culpa iste voluptatibus soluta similique reiciendis, consequatur facere veniam nobis esse dolores. Fuga, blanditiis quia, velit quibusdam eveniet id, sunt nisi beatae alias tenetur qui. Minus fugit voluptates nam beatae, ex animi, eaque alias laborum atque, assumenda ut similique veritatis voluptas. Quam accusamus consequatur, quia qui commodi obcaecati dolorum magnam quibusdam, facere animi illo voluptatem alias harum minima, quidem a cum sint quae! Eaque magni ex debitis sint in perferendis quibusdam neque asperiores aliquid architecto, atque omnis alias, molestiae consequatur commodi corporis tempora inventore libero maxime. Molestias sequi enim adipisci praesentium delectus eos quod, dolor velit modi dolores ducimus unde cum esse rerum dolore repellat impedit veniam. Ratione numquam mollitia quo odio asperiores doloremque hic aspernatur assumenda neque laborum! Explicabo qui sapiente cupiditate laborum ad quos voluptatum nostrum veniam quas voluptatem exercitationem corporis, dolorum fuga esse itaque quia amet repellendus possimus sed. Eligendi optio, blanditiis iusto voluptatibus, laudantium ab sint eius dicta necessitatibus commodi repudiandae velit impedit voluptatum magni accusantium ullam aperiam laboriosam, mollitia rem quam nam consequatur quos. Aspernatur cum animi nemo molestias.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quaerat possimus tempore ipsum similique earum mollitia, optio doloribus consequuntur minus iste omnis vitae aspernatur pariatur facere velit nihil accusantium, aliquam illum iusto eveniet voluptas. Ad soluta nostrum recusandae earum similique voluptate harum eius, modi aliquid sapiente officia numquam perferendis nemo repudiandae et eaque consectetur possimus fugiat velit, voluptatem porro at doloribus delectus. Quo id, excepturi molestias in nesciunt non! Facere repellat accusantium unde vel consequuntur excepturi quisquam veniam quo distinctio aut animi iusto, nobis assumenda aperiam omnis vero neque natus quibusdam maiores aspernatur eum obcaecati ullam tenetur eos? Ut minima laudantium doloribus commodi alias aliquid dolor culpa quidem. Corporis, suscipit! Quia asperiores ratione voluptatum fugit eaque commodi tempora quas est, ipsum pariatur facilis velit quod quos consequatur nemo error ea nesciunt, dolores molestias, minus impedit! Delectus veritatis ipsam repellendus natus? Nisi maiores a quas vel debitis libero minus laboriosam reiciendis dolor iste dignissimos nulla beatae rerum excepturi, soluta repudiandae perferendis numquam dicta, itaque sunt, expedita saepe hic! Saepe, explicabo! Libero ut architecto voluptatum optio provident dolore mollitia laudantium aliquid temporibus voluptas, dolor id accusantium nulla omnis dolores, odio cumque eveniet quisquam rem, pariatur quasi facere enim! Cum nobis quia, minima eligendi aliquid, accusamus doloremque quos eum voluptatum modi, corporis deleniti eius. Impedit minus placeat veniam, architecto excepturi itaque eos sit! Assumenda maxime quam dignissimos blanditiis natus praesentium nulla quibusdam? Neque adipisci quaerat aliquam voluptates, voluptatem excepturi recusandae minus id. Eligendi nobis praesentium earum voluptatem porro est pariatur fugiat dolore doloribus tempora eaque iure voluptates animi aspernatur, dolorum cumque rerum nihil ipsa! Aliquam laboriosam fuga non totam ratione maiores in a consequatur exercitationem velit inventore impedit doloribus cum ad enim recusandae eum unde explicabo ducimus, sunt amet facilis ipsa illum ullam. Incidunt sapiente ad soluta fugit tenetur quas dolorum amet excepturi?
+                </p>    
+        </div>
+        <script>
+            document.querySelector('#check').onclick=function(){
+                if(this.checked){
+                    document.querySelector('.div2').style.display="block";
+                 
+                }
+                else{
+                    document.querySelector('.div2').style.display="none";
+                }
+            }
+        </script>
+    </body>
+
+    </html>

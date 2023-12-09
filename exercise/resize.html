@@ -1,0 +1,14 @@
+
+<!-- 28) create a function ( name myfunc() ) and call the same function using resize event ( hint : within function print test data using console) -->
+
+<script>
+    let a=0;
+    function myfunc(){
+        a+=1;
+        console.log("okk"+a);
+        console.log(window.innerHeight);
+        console.log(window.innerWidth);
+    };
+    window.addEventListener('resize',myfunc);
+    myfunc();
+</script>

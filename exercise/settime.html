@@ -1,0 +1,23 @@
+<!-- 78) get value from text box on button click & show textbox data in paragraph after 3 sec delay -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="">
+    <button>Enter</button>
+    <p></p>
+</body>
+<script>
+    document.querySelector('button').onclick=function() {
+        let val=document.querySelector('input').value;
+        setTimeout(function() {
+          document.querySelector('p').innerHTML=val;
+        },3000)
+    }
+</script>
+</html>

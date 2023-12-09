@@ -1,0 +1,50 @@
+<!-- 102)  Write a JavaScript function which will take an array of numbers stored and find the second lowest and second greatest numbers, respectively. -->
+
+<script>
+    let a = new Array(332, 53, 2, 5232,4, 6, 66, 3238, 923877, 11, 333);
+
+    let big = a[0];
+    let small = a[0];
+
+    let secondBig = Infinity;
+    let secondSmall = -Infinity;
+
+    for (let i = 1; i < a.length; i++) {
+        if (a[i] > big) {
+            secondBig = big;
+            big = a[i];
+            console.log(secondBig);
+        } else if (a[i] > secondBig && a[i] !== big) {
+            secondBig = a[i];
+        }
+
+        if (a[i] < small) {
+            // Update both small and secondSmall
+            secondSmall = small;
+            small = a[i];
+        } else if (a[i] < secondSmall && a[i] !== small) {
+            // Update only secondSmall
+            secondSmall = a[i];
+        }
+    }
+
+    console.log("Second Largest Number:", secondBig);
+    console.log("Second Smallest Number:", secondSmall);
+</script>
+
+<!-- <script>
+    let a=new Array(332,53,2,5232,6,66,3238,923877,11,333);
+   let big=a[0];
+   let small=a[0];
+   for (let i = 0; i < a.length-1; i++) {
+        if (a[i-2]>=big){
+            big=a[i-2];
+        }
+        if (a[i]-2 < small) {
+                small = a[i-2];
+            }
+   }
+
+   console.log(big);
+   console.log(small);
+</script> -->

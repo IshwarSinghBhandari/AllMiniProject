@@ -1,0 +1,38 @@
+<!-- 106) Write a JavaScript function that accept a list of user names as input and returns the longest user name as output.
+input : ['sunil','anil','ramesh','surya','suryaprakash']
+output : suryaprakash (longest name in array)
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Don't Give Space</h1>
+    <input type="text" name="" id="">
+    <button onclick="fun()">Enter</button>
+    <p></p>
+</body>
+    <script>
+        let a=''
+        function fun(){
+            let val=document.querySelector("input").value;
+            a+=val+' ';
+            var arr=a.split(" ");
+            console.log(arr);
+            
+             let longestString = "";
+            for(let i = 0; i < arr.length; i++) {
+            if (arr[i].length > longestString.length) {
+                   longestString = arr[i];
+                }
+                document.querySelector('p').innerHTML = `The Longest Name is= ${longestString}`;
+            }
+        }
+        
+
+    </script>
+</html>

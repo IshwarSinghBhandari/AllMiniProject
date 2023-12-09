@@ -1,0 +1,43 @@
+<!-- 
+116) create a textbox ( id="text"). get textbox value using querySelector() example. recieve Date of birth as an input (e.g: 20/12/2019). -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Input Example</title>
+</head>
+<body>
+
+<input type="text" id="dateInput" placeholder="Enter Date of Birth (DD/MM/YYYY)">
+<button onclick="validateDate()">Submit</button>
+<br><br>
+<input type="text" id="x1" placeholder="Textbox 1"><br>
+<input type="text" id="x2" placeholder="Textbox 2"><br>
+<input type="text" id="x3" placeholder="Textbox 3">
+
+
+<script>
+    function validateDate() {
+        const inputDate = document.getElementById('dateInput').value;
+
+        const dateRegex = /^(\d{2})\/(\d{2})\/(\d{4})$/;
+
+        if (dateRegex.test(inputDate)) {
+            console.log("Valid Date:", inputDate);
+            let ok=inputDate.split("/");
+            console.log(ok);
+            document.getElementById('x1').value=ok[0];
+            document.getElementById('x2').value=ok[1];
+            document.getElementById('x3').value=ok[2];
+
+        } else {
+            console.error("Invalid Date Format. Please enter date in DD/MM/YYYY format.");
+        }
+
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!-- 126) on button click create textbox and append textbox in li tag -->
+<!-- 127) on button click create textbox , apply size attribute to textbox and append textbox in li tag -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Create text box</h1>
+    <button>Create</button>
+    <li>
+
+    </li>
+</body>
+<script>
+    let button = document.querySelector('button');
+    let li= document.querySelector('li')
+    button.onclick=function() {
+        let txt=document.createElement('input');
+        txt.type="text";
+        txt.placeholder="Enter text";
+        txt.size="50";
+        li.append(txt); 
+    }
+</script>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Add some basic styling for better appearance */
+    li {
+      list-style-type: none;
+      margin-bottom: 10px;
+    }
+  </style>
+  <title>Textbox Creation</title>
+</head>
+<body>
+
+  <button onclick="createAndAppendTextbox()">Create Textbox</button>
+  <ul id="textboxList"></ul>
+
+  <script>
+    function createAndAppendTextbox() {
+      // Create a new textbox
+      var textBox = document.createElement("input");
+      
+      // Apply the size attribute (you can adjust this value as needed)
+      textBox.setAttribute("size", "30");
+
+      // Attach the onkeyup event
+      textBox.onkeyup = function(event) {
+        testKeyupEvent(event);
+      };
+
+      // Create a new list item
+      var listItem = document.createElement("li");
+
+      // Append the textbox to the list item
+      listItem.appendChild(textBox);
+
+      // Append the list item to the list
+      document.getElementById("textboxList").appendChild(listItem);
+    }
+
+    function testKeyupEvent(event) {
+      // You can perform actions based on the keyup event here
+      console.log("Key pressed. Value in textbox: " + event.target.value);
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!-- 
+80) write a program to get total no of words from the given string. (hint: use split() method )
+[ Note: your input string is => Since JavaScript is a loosely-typed, dynamic and expressive language, you may accomplish the same task in various ways.] -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h4></h4>
+    <script>
+        function fun(){
+            let txt=" Since JavaScript is a loosely-typed, dynamic and expressive language, you may accomplish the same task in various ways."
+   
+        let content=txt.split(" ");
+            let total=0;
+        for (let i=0; i<content.length; i++){
+            console.log(i);
+            console.log(content[i]);
+            total++;
+            }
+            console.log("Total no of words= "+total);
+        }
+        fun();
+        
+        function capitalizeFirstLetter(inputString) {
+    let words = inputString.split(' ');
+
+    let capitalizedWords = words.map(function(word) {
+        return word.charAt(0).toUpperCase() + word.slice(1);
+    });
+
+    let resultString = capitalizedWords.join(' ');
+
+    return resultString;
+}
+
+let inputString = "JavaScript is a loosely typed";
+let outputString = capitalizeFirstLetter(inputString);
+
+console.log(outputString);
+
+
+    </script>
+</body>
+</html>

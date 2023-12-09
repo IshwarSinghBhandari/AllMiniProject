@@ -1,0 +1,37 @@
+<!-- 112) what is spread & rest parameter in javascript -->
+<!-- 111) What is hoisting in javascript , please explain using small example -->
+<!-- <script>
+    // var x;
+console.log(x); 
+var x = 5;
+console.log(x); 
+sayHello(); 
+
+function sayHello() {
+    console.log("Hello, World!");
+}
+</script> -->
+<script>
+    //spread 
+    const array1 = [1, 2, 3];
+const array2 = [...array1, 4, 5, 6];
+
+console.log(array2);
+//function spread   
+function addThreeNumbers(a, b, c) {
+    return a + b + c;
+}
+
+const numbers = [1, 2, 3];
+const sum = addThreeNumbers(...numbers);
+
+console.log(sum); 
+//rest parameter
+function sum(...numbers) {
+    return numbers.reduce((acc, num) => acc + num, 0);
+}
+
+console.log(sum(1, 2, 3, 4, 5)); 
+
+
+</script>

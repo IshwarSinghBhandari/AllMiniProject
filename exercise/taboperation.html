@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab Example</title>
+    <style>
+        div {
+            margin: auto;
+        }
+
+        button {
+            font-size: 2rem;
+            margin: 0%;
+        }
+
+        .tab-content {
+            display: none;
+            border: 1px solid black;
+            padding: 1rem;
+            background-color: gold;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button id="but1">Tab1</button>
+        <button id="but2">Tab2</button>
+        <button id="but3">Tab3</button>
+    </div>
+    <div id="div1" class="tab-content">
+        <h1>Tab1 operation</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit...</p>
+    </div>
+    <div id="div2" class="tab-content">
+        <h1>Tab2 operation</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit...</p>
+    </div>
+    <div id="div3" class="tab-content">
+        <h1>Tab3 operation</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit...</p>
+    </div>
+    <script>
+        let tabs = document.querySelectorAll("button");
+        let tabContents = document.querySelectorAll(".tab-content");
+
+        for (let i = 0; i < tabs.length; i++) {
+            tabs[i].onclick = function () {
+                // Hide all tab contents
+                tabContents.forEach(content => {
+                    content.style.display = "none";
+                });
+
+                // Show the corresponding tab content
+                let div = document.getElementById(`div${i + 1}`);
+                div.style.display = "block";
+
+                
+            };
+        }
+    </script>
+</body>
+</html>

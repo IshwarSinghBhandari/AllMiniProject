@@ -1,0 +1,23 @@
+
+<!-- 79) get value from text box on button click & show textbox data in paragraph in every interval (i.e. in every one second continuously). -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="">
+    <p></p>
+    <h1></h1>
+</body>
+<script>
+   
+
+    setInterval(function() {
+        let value = document.querySelector('input').value;
+        document.querySelector('p').innerHTML=value;
+    },1000);
+</script>
+</html>

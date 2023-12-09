@@ -1,0 +1,33 @@
+<!-- 30) create a paragraph with some dummy content , on button click change the paragraph value ( hint : use innerHTML & querySelector() functionality)  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    p{
+        background-color: lightblue;
+        width: 75%;
+        margin: auto;
+        padding: 2rem;
+        text-align: justify;
+        }
+    button{
+        font-size: 2rem;
+        margin: 2rem 12rem
+
+    }
+</style>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque veniam enim nesciunt aperiam corrupti aliquid, ducimus molestias accusantium tempora nostrum qui dolor eligendi labore necessitatibus temporibus hic totam? Porro, cumque. Fugiat nemo necessitatibus asperiores perspiciatis est, quidem laudantium sit excepturi, unde tenetur voluptas reprehenderit minima nam commodi molestiae consectetur at quibusdam cum nulla temporibus repudiandae nostrum architecto assumenda. Facere, iste repellat alias ratione consequuntur ducimus beatae? Minus laudantium doloribus, quo dignissimos sint necessitatibus fugiat sunt dicta aperiam saepe tenetur nisi ipsam aut autem perspiciatis eum maxime in soluta at eligendi praesentium exercitationem quibusdam qui. Voluptatum eos consequatur optio vel vitae?</p>
+
+    <button>Click here!</button>
+</body>
+<script>
+    document.querySelector('button').addEventListener('click',function(){
+        document.querySelector('p').innerHTML="rem ipsum dolor sit amet consectetur adipisicing elit. Neque veniam enim nesciunt aperiam corrupti aliquid, ducimus molestias accusantium tempora nostrum qui dolor eligendi labore necessitatibus temporibus hic totam? Porro, cumque. Fugiat nemo necessitatibus asperiores perspiciatis est, quidem laudantium sit excepturi, unde tenetur voluptas reprehenderit minima nam commodi molestiae consectetur at quibusdam cum nulla temporibus repudiandae nostrum architecto assumenda. Facere, iste repellat alias ratione consequuntur ducimus beatae? Minus laudantium doloribus, quo dignissimos sint necessitatibus fugiat sunt dicta aperiam saepe tenetur nisi ipsam aut autem perspiciatis eum maxime in soluta at eligendi praesentium exercitationem quibusdam qui. Voluptatum eos consequatur optio vel vitae?rem ipsum dolor sit amet consectetur adipisicing elit. Neque veniam enim nesciunt aperiam corrupti aliquid, ducimus molestias accusantium tempora nostrum qui dolor eligendi labore necessitatibus temporibus hic totam? Porro, cumque. Fugiat nemo necessitatibus asperiores perspiciatis est, quidem laudantium sit excepturi, unde tenetur voluptas reprehenderit minima nam commodi molestiae consectetur at quibusdam cum nulla temporibus repudiandae nostrum architecto assumenda. Facere, iste repellat alias ratione consequuntur ducimus beatae? Minus laudantium doloribus, quo dignissimos sint necessitatibus fugiat sunt dicta aperiam saepe tenetur nisi ipsam aut autem perspiciatis eum maxime in soluta at eligendi praesentium exercitationem quibusdam qui. Voluptatum eos consequatur optio vel vitae?rem ipsum dolor sit amet consectetur adipisicing elit. Neque veniam enim nesciunt aperiam corrupti aliquid, ducimus molestias accusantium tempora nostrum qui dolor eligendi labore necessitatibus temporibus hic totam? Porro, cumque. Fugiat nemo necessitatibus asperiores perspiciatis est, quidem laudantium sit excepturi, unde tenetur voluptas reprehenderit minima nam commodi molestiae consectetur at quibusdam cum nulla temporibus repudiandae nostrum architecto assumenda. Facere, iste repellat alias ratione consequuntur ducimus beatae? Minus laudantium doloribus, quo dignissimos sint necessitatibus fugiat sunt dicta aperiam saepe tenetur nisi ipsam aut autem perspiciatis eum maxime in soluta at eligendi praesentium exercitationem quibusdam qui. Voluptatum eos consequatur optio vel vitae? ";
+    })
+</script>
+</html>

@@ -1,0 +1,22 @@
+<script>
+    // Using eval() to dynamically execute code
+function evaluateExpression(expression) {
+    try {
+        const result = eval(expression);
+        console.log(`Result of ${expression}:`, result);
+    } catch (error) {
+        console.error('Error:', error.message);
+    }
+}
+
+// Example usage
+evaluateExpression('2 + 3'); // Outputs: Result of 2 + 3: 5
+
+const variableName = 'x';
+const variableValue = 10;
+evaluateExpression(`${variableName} * 2`); // Outputs: Result of x * 2: 20
+
+// This is just an example; using eval() with arbitrary input can be dangerous
+evaluateExpression('alert("Dangerous code!")'); // Outputs: Error: alert is not defined
+
+</script>

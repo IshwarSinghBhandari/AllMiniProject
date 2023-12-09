@@ -1,0 +1,79 @@
+<!-- 121) create an example to perform modal box operation using javascript.
+	[i.e. on button click please do the process for modal box] -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            /* body{
+                z-index: 0;
+            } */
+        .model{
+            display: none;
+            z-index: 32;
+            border: 1px solid;
+            top: 0;
+            left: 0%;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            position: fixed;
+            background-color: rgba(243, 9, 9, 0.4); 
+                       
+        }
+        .box{
+            /* z-index: 2929; */
+            margin: 5rem auto;
+            background-color: white;
+            padding: 1rem;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+            width: 70%;
+            border-radius: 2.5rem;
+        }
+        button{
+            margin-left: 4rem;
+            width: 10rem;
+            font-size: 2rem;
+            background-color: chartreuse;
+        }
+    </style>
+</head>
+<body>
+    <h1>MODEL BOX</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae facilis beatae aspernatur odit ea consectetur, et maxime id, nulla officia, nisi animi voluptates totam perferendis error? Eos culpa expedita consequatur beatae doloribus provident saepe, laboriosam cum iste perspiciatis molestias sint fugiat voluptatum vitae nam aut a autem corrupti odio enim atque modi sit delectus? Deleniti corrupti facilis eos quia non nesciunt magni. Nam distinctio ex modi iure sit adipisci molestias, enim ullam impedit illum labore vitae possimus, voluptate eaque at. Voluptas necessitatibus laboriosam, perspiciatis quia eaque provident iste tenetur officia ea dolore minima, nulla dolorem quibusdam quisquam repellendus ullam sed, deserunt harum nostrum! Ad fuga assumenda asperiores in harum eaque quaerat laboriosam, accusantium similique consequatur explicabo illum saepe odit. Voluptatibus magni facere illum quam autem eligendi quo debitis eius doloribus quidem, accusantium nesciunt delectus unde nemo quia architecto minima dignissimos aliquid. Corrupti veritatis inventore rem accusamus quas dolorem mollitia molestias sint alias. Quod expedita voluptas numquam laborum veniam a fuga cupiditate asperiores, veritatis impedit fugit ea, quis aliquid eaque odio! Distinctio debitis ratione error cumque, laboriosam perferendis dolorem sed voluptatum et aliquam culpa laborum minus, dignissimos porro, odit unde? Assumenda aperiam molestiae odio, eveniet fugit magni officia molestias, blanditiis ab officiis reiciendis harum facere dignissimos aut perferendis ullam. Nulla ipsa error natus corrupti, commodi enim beatae deleniti explicabo tempora assumenda dignissimos nam itaque tempore numquam fugit id sed delectus laborum modi earum, inventore doloribus totam? Tempora vitae perferendis amet, soluta nihil facere numquam deleniti, ullam voluptate cum aliquid rerum quis sequi beatae, quos obcaecati. Doloribus sunt cupiditate, similique aperiam quidem tenetur? Veniam, deserunt culpa. Voluptas doloribus molestias veritatis, officiis deserunt, perspiciatis eos iste aperiam adipisci quo tenetur deleniti, magnam quidem suscipit repellendus similique nam numquam! Et voluptas aperiam debitis aut placeat recusandae eos, sunt consequuntur iusto odit quas provident veniam?</p>
+    <button id="open">open</button>
+    <h2>new model box</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex quia molestias sunt deleniti omnis facilis laudantium! Exercitationem mollitia optio nihil omnis aliquam nemo aut reiciendis non harum expedita, atque fugit inventore natus dicta nesciunt maiores, quod accusamus, dolore molestias quasi excepturi alias velit quibusdam animi. Ullam delectus molestiae magnam recusandae iste veritatis quasi, quos minus quidem mollitia nemo maxime reprehenderit doloribus? Nobis, illum impedit. Quibusdam quis ratione quasi, sint minus sunt amet nesciunt explicabo vero dolor, porro sed perferendis. Perferendis voluptates earum ullam? Saepe, voluptates repellendus. Quam error deleniti, debitis rem quod officiis expedita ipsa eaque, culpa necessitatibus maxime, ut accusantium aut sapiente illo voluptatem hic laudantium ad earum sint eum iure eos atque commodi? Dolor corporis maxime pariatur voluptate ex possimus, accusamus natus harum nam veritatis voluptatem iusto ullam, unde repellat sit consequuntur assumenda earum cumque accusantium dignissimos. Recusandae, beatae sequi ad fugiat nostrum reprehenderit quis facere enim quas odio eligendi laboriosam dicta ex nisi sed maxime voluptate, voluptatem cum, doloribus debitis obcaecati exercitationem sapiente iure distinctio. Voluptates quaerat corporis optio non ducimus perferendis vel cupiditate quam, ipsam, veniam sit necessitatibus molestiae excepturi iusto illum eligendi doloremque iste corrupti, suscipit in nemo impedit! Recusandae tempore ea fugit ab quibusdam!</p>
+    <h3>model box last</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio neque dolorem tempora cum assumenda repellat earum molestias nihil atque culpa! A reprehenderit commodi quam at praesentium ipsam dolor odit labore? Voluptas voluptatem ducimus quibusdam doloribus quaerat, nostrum eos itaque corrupti. Iusto repellendus quae voluptatem sit dignissimos consectetur? Inventore, tempore culpa quas sed vel eaque ipsa nobis, rerum minima aliquid dolore asperiores nesciunt quos accusantium voluptatum blanditiis amet. Facilis quas rem voluptate velit, veniam numquam provident corporis assumenda minus. At cupiditate, inventore iure officia culpa aperiam magnam pariatur saepe, a vitae facilis necessitatibus. Soluta aut praesentium sunt voluptas reiciendis culpa magni?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio neque dolorem tempora cum assumenda repellat earum molestias nihil atque culpa! A reprehenderit commodi quam at praesentium ipsam dolor odit labore? Voluptas voluptatem ducimus quibusdam doloribus quaerat, nostrum eos itaque corrupti. Iusto repellendus quae voluptatem sit dignissimos consectetur? Inventore, tempore culpa quas sed vel eaque ipsa nobis, rerum minima aliquid dolore asperiores nesciunt quos accusantium voluptatum blanditiis amet. Facilis quas rem voluptate velit, veniam numquam provident corporis assumenda minus. At cupiditate, inventore iure officia culpa aperiam magnam pariatur saepe, a vitae facilis necessitatibus. Soluta aut praesentium sunt voluptas reiciendis culpa magni?</p>
+
+    <div class="model">
+        <div class="box">
+            <h1>modelbox</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae deserunt illum dolorem, quam totam tenetur sint odio autem enim fugiat. Sit veritatis, et maxime eligendi ea ipsum pariatur sequi enim.</p>
+            <h2>model</h2>
+            <p>Lagni reiciendis. Magni, cumque? Non, obca reiciendis. Magni, cumque? Non, obcaecati?</p>
+            <p>Lagni reiciendis. Magni, cumque? Non, obca reiciendis. Magni, cumque? Non, obcaecati?</p>
+            <button id="close">close</button>
+        </div>
+    </div>
+</body>
+<script>
+      var modal = document.querySelector(".model");
+
+window.addEventListener('click', function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+});
+    document.querySelector('#close').onclick = function(){
+        document.querySelector('.model').style.display = 'none';   
+    }
+    document.querySelector('#open').onclick=function(){
+        document.querySelector('.model').style.display = 'block';
+    }
+</script>
+</html>
