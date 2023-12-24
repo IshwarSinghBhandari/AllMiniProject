@@ -1,0 +1,29 @@
+<!-- Write A Program To Check Whether given string is Pllaindrome or Not -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Checker</title>
+</head>
+<body>
+
+    <script>
+        function Palindrome(str) {
+            const cleanStr = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+            return cleanStr === cleanStr.split('').reverse().join('');
+        }
+
+        const inputString = "bioasjsaoib";
+        const result = Palindrome(inputString);
+
+        if (result) {
+            console.log("The string is a palindrome.");
+        } else {
+            console.log("The string is not a palindrome.");
+        }
+    </script>
+
+</body>
+</html>

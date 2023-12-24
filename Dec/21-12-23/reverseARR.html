@@ -1,0 +1,29 @@
+<script>
+    // Sample array
+const originalArray = [1, 2, 3, 4, 5];
+
+// Using for of loop to reverse the array
+function reversForOf(arr) {
+  const reversedArray = [];
+  for (const element of arr) {
+    reversedArray.unshift(element);
+  }
+  return reversedArray;
+}
+
+const reversedArrayForOf = reversForOf(originalArray);
+console.log("Reversed Array using for of:", reversedArrayForOf);
+
+// Using for in loop to reverse the array
+function reversForIn(arr) {
+  const reversedArray = [];
+  for (const index in arr) {
+    reversedArray.unshift(arr[index]);
+  }
+  return reversedArray;
+}
+
+const reversedArrayForIn = reversForIn(originalArray);
+console.log("Reversed Array using for in:", reversedArrayForIn);
+
+</script>

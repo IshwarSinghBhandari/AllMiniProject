@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate Age</title>
+</head>
+<body>
+
+    <script>
+        function calculateAge(dateOfBirth) {
+            const dob = new Date(dateOfBirth);
+            
+            const currentDate = new Date();
+
+            const age = currentDate.getFullYear() - dob.getFullYear();
+            
+            if (
+                currentDate.getMonth() < dob.getMonth() ||
+                (currentDate.getMonth() === dob.getMonth() && currentDate.getDate() < dob.getDate())
+            ) {
+                return age - 1;
+            } else {
+                return age;
+            }
+        }
+
+        const dateOfBirth = "1990-05-15";
+        const age = calculateAge(dateOfBirth);
+        console.log("Age:", age);
+    </script>
+
+</body>
+</html>

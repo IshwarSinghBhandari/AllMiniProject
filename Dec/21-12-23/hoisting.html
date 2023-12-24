@@ -1,0 +1,30 @@
+<script>
+    // Variable Hoisting with var
+console.log("Before var declaration:", myVar); 
+var myVar = "I am a var";
+console.log("After var declaration:", myVar); 
+
+// Variable Hoisting with let
+let myLet = "I am a let";
+console.log("After let declaration:", myLet); 
+
+// Function Hoisting
+hoistedFunction(); 
+function hoistedFunction() {
+  console.log("I am a hoisted function");
+}
+
+// Function Hoisting with var
+console.log("Before var function declaration:", myVarFunction); 
+var myVarFunction = function() {
+  console.log("I am a var function");
+};
+console.log("After var function declaration:", myVarFunction);
+
+// Function Hoisting with let
+let myLetFunction = function() {
+  console.log("I am a let function");
+};
+console.log("After let function declaration:", myLetFunction); // "I am a let function"
+
+</script>

@@ -1,0 +1,44 @@
+<!-- Write Down a Code to sort Numerc Array in Ascending and Descending Format using While Loop -->
+<script>
+  function sortAscending(array) {
+    let i = 0;
+    while (i < array.length - 1) {
+      let j = 0;
+      while (j < array.length - i - 1) {
+        if (array[j] > array[j + 1]) {
+          let temp = array[j];
+          array[j] = array[j + 1];
+          array[j + 1] = temp;
+        }
+        j++;
+      }
+      i++;
+    }
+  }
+
+  function sortDescending(array) {
+    let i = 0;
+    while (i < array.length - 1) {
+      let j = 0;
+      while (j < array.length - i - 1) {
+        if (array[j] < array[j + 1]) {
+          let temp = array[j];
+          array[j] = array[j + 1];
+          array[j + 1] = temp;
+        }
+        j++;
+      }
+      i++;
+    }
+  }
+
+  let numericArray = [5, 2, 8, 1, 7];
+
+  console.log("Original Array:", numericArray);
+
+  sortAscending(numericArray);
+  console.log("Sorted in Ascending Order:", numericArray);
+
+  sortDescending(numericArray);
+  console.log("Sorted in Descending Order:", numericArray);
+</script>

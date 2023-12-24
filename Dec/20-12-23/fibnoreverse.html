@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci Series (Recursive)</title>
+</head>
+<body>
+
+    <script>
+        function fibonacciRecursive(n) {
+            if (n <= 1) {
+                return n;
+            } else {
+                return fibonacciRecursive(n - 1) + fibonacciRecursive(n - 2);
+            }
+        }
+
+        function printFibonacciSeries(n) {
+            for (let i = 0; i < n; i++) {
+                console.log(fibonacciRecursive(i));
+            }
+        }
+
+        printFibonacciSeries(10);
+    </script>
+
+</body>
+</html>

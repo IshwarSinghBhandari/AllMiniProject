@@ -1,0 +1,33 @@
+</head>
+<body>
+
+    <script>
+        // First-Class Function: Function assigned to a variable
+        const greet = function(name) {
+            return `Hello, ${name}!`;
+        };
+
+        console.log(greet("John")); 
+
+        // Higher-Order Function: Function that takes a function as an argument
+        function greetAndTransform(name, transformFunction) {
+            const greeting = transformFunction(name);
+            console.log(greeting);
+        }   
+
+        // Higher-Order Function: Function that returns a function
+        function greeterFunction(greetingType) {
+            return function(name) {
+                return `${greetingType}, ${name}!`;
+            };
+        }
+
+        const politeGreeter = greeterFunction("Good day");
+        const casualGreeter = greeterFunction("Hey");
+
+        greetAndTransform("Alice", politeGreeter);  
+        greetAndTransform("Bob", casualGreeter);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,222 @@
+<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+<!-- Load Babel -->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+<div id="root"></div>
+<style>
+    body{
+        box-sizing: border-box;
+        height: 100vh;
+        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-a1XEud0HI_GJVERJmRPLHnD6kzoV7yFpbgrLTsWnKpAdZ4Jxst2zaZUOyfkuSwekF9A&usqp=CAU');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    input{
+        /* height: 100%; */
+        width: 100%; border-radius: 15px;
+        outline: none; 
+        border: none;
+        padding-left: 8px;
+        background-color: #EEF5FF;
+        
+    }
+   
+    .main{
+        height: 100%;
+        width: 100%;
+        border-radius: 15px;
+        /* gap: 1rem; */
+    }
+    .sec{
+        height: 50%; border-radius: 15px;
+      
+    }
+    p{
+        color: rgb(255, 136, 0);
+    }
+</style>
+<script type="text/babel">
+    // temperature converter
+    function conv(){
+            const inputElement = document.getElementById('temp');
+        const resultElement = document.getElementById('result');
+
+        const temperature = inputElement.value;
+
+        if (!isNaN(temperature)) {
+            const celsius = ((parseFloat(temperature) - 32) * 5) / 9;
+            resultElement.textContent = `Temperature in Celsius: ${celsius.toFixed(2)} °C`;
+        } else {
+            resultElement.textContent = 'Please enter a valid number';
+        }
+        }
+
+        // ALL PRODUCT PRICE
+        function total() {
+        const input1 = document.getElementById('val1');
+        const input2 = document.getElementById('val2');
+        const resultElement = document.getElementById('result2');
+
+        const value1 = parseFloat(input1.value);
+        const value2 = parseFloat(input2.value);
+
+        if (!isNaN(value1) && !isNaN(value2)) {
+            const multiplicationResult = value1 * value2;
+
+            resultElement.textContent = `Result: ${multiplicationResult}`;
+        } else {
+            resultElement.textContent = 'Please enter valid numbers in both fields';
+        }
+    }
+
+    // AGE CALCULATOR
+ 
+    function agecal() {
+    var dobString = document.getElementById("age").value;
+
+    var dob = new Date(dobString);
+    var currentDate = new Date();
+
+    var ageInMillis = currentDate - dob;
+    var ageInYears = Math.floor(ageInMillis / (365.25 * 24 * 60 * 60 * 1000));
+
+    var resultElement = document.getElementById("result3");
+    resultElement.innerHTML = "Your age is: " + ageInYears + " years";
+}
+
+// PRODUCT DISCOUNT
+
+
+function discount() {
+    var amount = parseFloat(document.getElementById("val11").value);
+    var discount = parseFloat(document.getElementById("val22").value);
+
+    if (isNaN(amount) || isNaN(discount)) {
+        document.getElementById("result4").innerHTML = "Please enter valid numbers.";
+        return;
+    }
+
+    var discountedAmount = amount - (amount * (discount / 100));
+
+    var resultElement = document.getElementById("result4");
+    resultElement.innerHTML = "Discounted Amount: ₹"  + discountedAmount.toFixed(2);
+}
+
+// EMI CALCULATOR
+
+
+function Emi() {
+    var loanAmount = parseFloat(document.getElementById("amou").value);
+    var interestRate = parseFloat(document.getElementById("roi").value);
+    var numberOfYears = parseInt(document.getElementById("year").value);
+
+    if (isNaN(loanAmount) || isNaN(interestRate) || isNaN(numberOfYears)) {
+        document.getElementById("result5").innerHTML = "Please enter valid numbers.";
+        return;
+    }
+
+    var monthlyInterestRate = (interestRate / 100) / 12;
+    var totalPayments = numberOfYears * 12;
+
+    var emi = (loanAmount * monthlyInterestRate * Math.pow(1 + monthlyInterestRate, totalPayments)) /
+              (Math.pow(1 + monthlyInterestRate, totalPayments) - 1);
+
+    var resultElement = document.getElementById("result5");
+    resultElement.innerHTML = "Monthly EMI: ₹" + emi.toFixed(2);
+}
+
+// PPF CALCULATOR
+function ppf() {
+    var principalAmount = parseFloat(document.getElementById("amou1").value);
+    var interestRate = parseFloat(document.getElementById("roi1").value);
+    var numberOfYears = parseInt(document.getElementById("year1").value);
+
+    if (isNaN(principalAmount) || isNaN(interestRate) || isNaN(numberOfYears)) {
+        document.getElementById("result6").innerHTML = "Please enter valid numbers.";
+        return;
+    }
+
+    var monthlyInterestRate = (interestRate / 100) / 12;
+    var totalPayments = numberOfYears * 12;
+
+    var maturityAmount = principalAmount * ((Math.pow(1 + monthlyInterestRate, totalPayments) - 1) / monthlyInterestRate);
+
+    var resultElement = document.getElementById("result6");
+    resultElement.innerHTML = "Maturity Amount: ₹" + maturityAmount.toFixed(2);
+}
+
+
+        function Product(){
+    
+            return (
+                  <div class="container text-center">
+                     <h1 class="text-warning">Calculate</h1>
+                    <div class="main row  m-auto">
+                                        
+                    <div class="container sec text-center  col-4  border ">
+                        <p class="fs-3 fw-medium">EMI CALCULATOR</p>
+                        <input id="amou" type="number" class="fs-4 m-0" placeholder="Enter Amount" /> <br />
+                        <input id="roi" type="number" class="fs-4 mt-1" placeholder="Enter Rate of Interest" /> <br />
+                        <input id="year" type="number" class="fs-4 mt-1" placeholder="Enter Years" /> <br />
+                        <button className="btn btn-outline-light fs-4 m-3" onClick={Emi}>ENTER</button>
+                        <div id="result5" class="fs-5 p-1 text-warning "></div>
+                    </div>
+
+
+                    <div class="container sec text-center col-4 border">
+                        <p class="fs-3 fw-medium">PPF CALCULATOR</p>
+                        <input id="amou1" type="number" class="fs-4 m-0" placeholder="Enter Amount" /> <br />
+                        <input id="roi1" type="number" class="fs-4 mt-1" placeholder="Enter Rate of Interest" /> <br />
+                        <input id="year1" type="number" class="fs-4 mt-1" placeholder="Enter Years" /> <br />
+                        <button className="btn btn-outline-light fs-4 m-3" onClick={ppf}>ENTER</button>
+                        <div id="result6" class="fs-5 p-1 text-warning"></div>
+                    </div>
+
+
+                <div class="container sec text-center col-4 border ">
+                    <p class="fs-3 fw-medium">Temperature Converter</p>
+                    <input id="temp" type="number" class="fs-4 m-0" placeholder="Enter Temperature" /> <br />
+                    <button className="btn btn-outline-light fs-4 m-3" onClick={conv}>ENTER</button>
+                    <div id="result" class="fs-4 p-1 text-warning"></div>
+                </div>
+
+                <div class="container sec text-center col-4 border ">
+                    <p class="fs-3 fw-medium">ALL PRODUCT PRICE</p>
+                    <input id="val1" type="number" class="fs-4 m-0" placeholder="Enter Amount" /> <br />
+                    <input id="val2" type="number" class="fs-4 mt-1" placeholder="Enter Quantity" /> <br />
+                    <button className="btn btn-outline-light fs-4 m-3" onClick={total}>ENTER</button>
+                    <div id="result2" class="fs-5 p-1 text-warning"></div>
+                </div>
+
+                <div class="container sec text-center col-4 border ">
+                    <p class="fs-3 fw-medium">AGE CALCULATOR</p>
+                    <input id="age" type="text" class="fs-4 m-0" placeholder="Enter Age (dd mm yy)" /> <br />
+                    <button className="btn btn-outline-light fs-4 m-3" onClick={agecal}>ENTER</button>
+                    <div id="result3" class="fs-5 p-1 text-warning"></div>
+                </div>
+
+                
+                <div class="container sec text-center col-4 border  ">
+                    <p class="fs-3 fw-medium">PRODUCT DISCOUNT</p>
+                    <input id="val11" type="number" class="fs-4 m-0" placeholder="Enter Amount" /> <br />
+                    <input id="val22" type="number" class="fs-4 mt-1" placeholder="Enter Discount" /> <br />
+                    <button className="btn btn-outline-light fs-4 m-3" onClick={discount}>ENTER</button>
+                    <div id="result4" class="fs-5 p-1 text-warning "></div>
+                </div>
+
+
+        </div> 
+        </div>
+                            
+
+            );
+        }
+
+        ReactDOM.render(<Product />, document.getElementById('root'));
+</script>

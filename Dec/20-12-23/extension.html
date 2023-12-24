@@ -1,0 +1,35 @@
+
+
+    <script>
+        function getFileExtension(fileName) {
+            const parts = fileName.split('.');
+            if (parts.length > 1) {
+                return parts[parts.length - 1].toLowerCase();
+            } else {
+                return null; 
+            }
+        }
+
+        function isImageFile(extension) {
+            const imageExtensions = ['jpg', 'jpeg', 'png', 'gif', 'bmp', 'svg'];
+
+            return imageExtensions.includes(extension);
+        }
+
+        const fileName = 'screenshot.png';
+        const fileExtension = getFileExtension(fileName);
+
+        if (fileExtension) {
+            console.log(`File Extension: ${fileExtension}`);
+
+            if (isImageFile(fileExtension)) {
+                console.log('This is an image file.');
+            } else {
+                console.log('This is not an image file.');
+            }
+        } else {
+            console.log('Unable to determine the file extension.');
+        }
+    </script>
+
+
